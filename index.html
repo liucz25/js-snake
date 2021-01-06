@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        button {
+            padding: 20px;
+            outline: none;
+        }
+        
+        .map {
+            width: 800px;
+            height: 600px;
+            background: url('./pic/bg.png');
+            border: 10px solid palevioletred;
+            margin: 100px auto;
+            position: relative;
+        }
+        
+        .map>.food {
+            width: 18px;
+            height: 18px;
+            background: url('./pic/food.png');
+            position: absolute;
+            /* left: 100px;
+            top: 100px; */
+        }
+        
+        .map>.head {
+            width: 20px;
+            height: 20px;
+            background: url('./pic/head.png');
+            position: absolute;
+            /* left: 60px;
+            top: 0px; */
+        }
+        
+        .map>.body {
+            width: 20px;
+            height: 20px;
+            background: url('./pic/body.png');
+            position: absolute;
+            /* left: 40px;
+            top: 0px;  */
+        }
+    </style>
+</head>
+
+<body>
+    <button class="start">开始</button>
+    <button class="stop">停止</button>
+    <button class="restart">重新开始</button>
+    <input type="text" value="0" class="score">
+    <div class="map">
+        <!-- <div class="food"></div>
+        <div class="head"></div>
+        <div class="body"></div> -->
+
+    </div>
+    <script src="./food.js"></script>
+    <script src="./snake.js"></script>
+    <script src='./game.js'></script>
+    <!-- <script src='./main.js' type='module'></script> -->
+    <script>
+        /*贪吃蛇
+
+                                                                                                                                                                                                1.需求分析
+                                                                                                                                                                                                 + 分成四个模块
+                                                                                                                                                                                                 1-1食物模块-生成一个食物，随机一个位置
+                                                                                                                                                                                                 1-2蛇模块-生成一个蛇，移动，判断吃到食物，死亡
+                                                                                                                                                                                                1-3游戏规则模块-跑到多快，游戏积分，开始，结束，吃到食物做什么，撞墙做什么
+                                                                                                                                                                                                1-4整合-点击什么开始，点击什么结束
+                                                                                                                                                                                                 2.书写食物模块
+                                                                                                                                                                                                 +创建一个标签，类名food
+                                                                                                                                                                                                 +计算一个位置
+                                                                                                                                                                                                 +插入到地图
+
+                                                                                                                                                                                                 3。书写蛇模块
+                                                                                                                                                                                                 
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                         */
+
+
+        // const map = document.querySelector('.map')
+        //     // const f = new Food(map)
+        //     //     // console.log(f)
+        //     // const s = new Snake(map)
+        //     // console.log(s)
+
+        const g = new Game('.map', '.score')
+        console.log(g)
+    </script>
+
+
+
+
+
+</body>
+
+</html>
